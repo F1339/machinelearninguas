@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umay ML</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stayles.css') }}">
+</head>
+<body>
+    <header>
+        <div id="headerText">MACHINE LEARNING PREDICTION</div>
+        <div>
+            <select id="algorithmSelect" onchange="changeAlgorithm()" aria-label="Select machine learning algorithm">
+                <option value="svm">Algoritma Support Vector Machine</option>
+                <option value="pcp">Algoritma Perceptron</option>
+                <option value="rf">Algoritma Random Forest</option>
+            </select>
+        </div>
+    </header>
+    <div class="content">
+        <div class="main-row">
+            <div class="column frame-container1">
+                <div class="input-container">
+                    <div id="fish-text" class="main-text">FISH PREDICTION</div>
+                    <input type="number" id="fish-length" placeholder="Length">
+                    <input type="number" id="fish-weight" placeholder="Weight">
+                    <input type="number" id="fish-wl-ratio" placeholder="W/L Ratio">
+                    <div class="button-container">
+                        <button class="predict" onclick="predict('fish')">Predict</button>
+                        <button class="reset" onclick="resetInput('fish')">Reset Input</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column frame-container2">
+                <div class="input-container">
+                    <div id="fish-text" class="main-text">PUMPKIN PREDICTION</div>
+                    <input type="number" id="pumpkin-area" placeholder="Area">
+                    <input type="number" id="pumpkin-perimeter" placeholder="Perimeter">
+                    <input type="number" id="pumpkin-major-axis" placeholder="Major Axis Length">
+                    <input type="number" id="pumpkin-minor-axis" placeholder="Minor Axis Length">
+                    <input type="number" id="pumpkin-convex-area" placeholder="Convex Area">
+                    <input type="number" id="pumpkin-equiv-diameter" placeholder="Equivalent Diameter">
+                    <input type="number" id="pumpkin-eccentricity" placeholder="Eccentricity">
+                    <input type="number" id="pumpkin-solidity" placeholder="Solidity">
+                    <input type="number" id="pumpkin-extent" placeholder="Extent">
+                    <input type="number" id="pumpkin-roundness" placeholder="Roundness">
+                    <input type="number" id="pumpkin-aspect-ratio" placeholder="Aspect Ratio">
+                    <input type="number" id="pumpkin-compactness" placeholder="Compactness">
+                    <div class="button-container">
+                        <button class="predict" onclick="predict('pumpkin')">Predict</button>
+                        <button class="reset" onclick="resetInput('pumpkin')">Reset Input</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column frame-container3">
+                <div class="input-container">
+                    <div id="fish-text" class="main-text">FRUIT PREDICTION</div>
+                    <input type="number" id="fruit-diameter" placeholder="Diameter">
+                    <input type="number" id="fruit-weight" placeholder="Weight">
+                    <input type="number" id="fruit-red" placeholder="Red">
+                    <input type="number" id="fruit-green" placeholder="Green">
+                    <input type="number" id="fruit-blue" placeholder="Blue">
+                    <div class="button-container">
+                        <button class="predict" onclick="predict('fruit')">Predict</button>
+                        <button class="reset" onclick="resetInput('fruit')">Reset Input</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-row">
+            <div class="column" id="footer1">
+                <div>Hasil Prediksi Fish</div>
+                <div id="fish-result" class="result-text">HASIL...?</div>
+            </div>
+            <div class="column" id="footer2">
+                <div>Hasil Prediksi Pumpkin</div>
+                <div id="pumpkin-result" class="result-text">HASIL...?</div>
+            </div>
+            <div class="column" id="footer3">
+                <div>Hasil Prediksi Fruit</div>
+                <div id="fruit-result" class="result-text">HASIL...?</div>
+            </div>
+        </div>        
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background: linear-gradient(to right, #7f00ff, #e100ff, #ff5722);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+header select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-row {
+    display: flex;
+    flex: 1;
+    border-top: 2px solid #ccc;
+}
+
+.footer-row {
+    display: flex;
+    height: 10%;
+    border-top: 2px solid #ccc;
+}
+
+.column {
+    flex: 10;
+    border-right: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+.result-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff0000;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.main-text {
+    order: -1; 
+    margin-bottom: 10px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.095);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+}
+
+
+.frame-container1 {
+    background-image: url('../gambar/fish.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.frame-container2 {
+    background-image: url('../gambar/pumpkin.jpg');
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.frame-container3 {
+    background-image: url('../gambar/fruit.jpg'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.input-container {
+    position: absolute;
+    top: 5px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container input {
+    margin-bottom: 10px;
+    padding: 4px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-container .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;  
+}
+
+.input-container button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #7f00ff;
+    color: white;
+    cursor: pointer;
+    flex: 1; 
+}
+
+.input-container button:hover {
+    background: #5a00c6;
+}
